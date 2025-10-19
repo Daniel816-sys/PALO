@@ -1,19 +1,10 @@
-meme_dict = {
-            "КРИНЖ": "Что-то очень странное или стыдное",
-            "ЛОЛ": "Что-то очень смешное",
-            "ИЗИ": "Что-то очень легкое",
-            "ШОК": "Что-то поразительно",
-            }
-while True:
-    word = input("Введите непонятное слово : ").upper()
-    if word in meme_dict:
-        # Что делать, если слово нашлось?
-        print(meme_dict[word])
-    elif word == "ВЫХОД": 
-        break
-    else:
-        print("Извините, такого слово у нас нет, не хотите лы вы его добавить?")
-        val= input("Ведите значение этого слова: ")
-        meme_dict[word] = val 
-    
-    # Что делать, если слово не нашлось?
+import random
+
+
+symbols = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+len_password = int(input("Длина пароля:"))
+password = ""
+
+for i in range(len_password):
+    password += random.choice(symbols)
+print(password)
